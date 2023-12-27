@@ -13,7 +13,7 @@
    font-family: 'Poppins', sans-serif;
    background-color: white;
    color: black;
-   transition: background-color, color 5s;
+   transition: background-color 1s;
  }
 
  html {
@@ -28,7 +28,7 @@
  .dark-mode {
    background-color: #272655;
    color: white;
-   transition: background-color, color 5s;
+   transition: background-color color 1s;
 }
 
 #toggle {

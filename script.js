@@ -5,12 +5,17 @@ function toggleMenu() {
     icon.classList.toggle('open');
 }
 
+
+if (toggle) {
+    document.body.classList.add('dark-mode');
+}
+
 var toggle = document.getElementById('toggle');
 
 toggle.onclick = function(){
     document.body.classList.toggle('dark-mode');
     if (document.body.classList.contains('dark-mode')){
-        toggle.src = "mode/darkmode.png";
+        toggle.src = "modes/darkmode.png";
     }else{
         toggle.src = "modes/lightmode.png";
 
