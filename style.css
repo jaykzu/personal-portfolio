@@ -96,3 +96,25 @@
       opacity: 0%;
    }
 }
+
+/* Second page */
+
+.about-me p {
+   padding-top: 20vh;
+   text-align: center;
+   font-weight: bold;
+   font-size: 25px;
+}
+
+.second {
+   opacity: 0;
+   filter: blur(5px);
+   transform: translateX(-100%);
+   transition: all 3s;
+}
+
+.show {
+   opacity: 1;
+   filter: blur(0);
+   transform: translateX(0);
+}
