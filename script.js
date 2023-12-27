@@ -5,11 +5,26 @@ function toggleMenu() {
     icon.classList.toggle('open');
 }
 
+var toggle = document.getElementById('toggle');
+
+toggle.onclick = function(){
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')){
+        toggle.src = "mode/darkmode.png";
+    }else{
+        toggle.src = "modes/lightmode.png";
+
+    }
+}
+
+
+
+
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const phrases = ['program', 'study', 'sleep'];
+const phrases = ['program', 'study', 'sleep', 'work out'];
 const el = document.getElementById('typewriter');
 
 let sleepTime = 100;
@@ -26,7 +41,7 @@ const writeLoop = async () => {
             await sleep(sleepTime);
         }
 
-        await sleep(sleepTime * 10);
+        await sleep(sleepTime * 27.8);
 
         for (let i = curWord.length; i > 0; i--) {
             el.innerText = curWord.substring(0, i - 1);

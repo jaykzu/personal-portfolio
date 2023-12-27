@@ -11,6 +11,9 @@
 
  body {
    font-family: 'Poppins', sans-serif;
+   background-color: white;
+   color: black;
+   transition: background-color, color 5s;
  }
 
  html {
@@ -18,14 +21,30 @@
  }
 
  p {
-   color: rgb(red, green, blue);
    font-family: 'Inconsolata', monospace;
  }
 
+ /* Dark MODE */
+ .dark-mode {
+   background-color: #272655;
+   color: white;
+   transition: background-color, color 5s;
+}
 
- /* Sections */
+#toggle {
+   position: absolute;
+   top: 0;
+   right: 0;
+   margin: 10px; /* Adjust this value to add some spacing from the top and right edges */
+   padding: 20px; /* Add padding for better visibility */
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+}
 
- section {
+ /* Section(s) */
+
+ #profile, #socials, .second {
    padding-top: 4vh;
    height: 96vh;
    margin: 0 18rem;
@@ -75,6 +94,8 @@
    height: 2rem;
 }
 
+
+
 /* Typewriter Animation */
 
 #typewriter {
@@ -118,3 +139,4 @@
    filter: blur(0);
    transform: translateX(0);
 }
+
