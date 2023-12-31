@@ -5,8 +5,11 @@ function toggleMenu() {
     icon.classList.toggle('open');
 }
 
+// Dark Mode
 
-if (toggle) {
+var darkMode = localStorage.getItem('darkMode');
+
+if (darkMode === 'enabled') {
     document.body.classList.add('dark-mode');
 }
 
@@ -16,14 +19,15 @@ toggle.onclick = function(){
     document.body.classList.toggle('dark-mode');
     if (document.body.classList.contains('dark-mode')){
         toggle.src = "modes/darkmode.png";
+        localStorage.setItem('darkMode', 'enabled');
     }else{
         toggle.src = "modes/lightmode.png";
-
+        localStorage.setItem('darkMode', 'disabled');
     }
 }
 
 
-
+// Typewriting 
 
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
