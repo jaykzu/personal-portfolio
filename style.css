@@ -9,6 +9,7 @@
     padding: 0;
  }
 
+
  body {
    font-family: 'Poppins', sans-serif;
    background-color: white;
@@ -22,7 +23,20 @@
 
  p {
    font-family: 'Inconsolata', monospace;
+
  }
+
+@keyframes fade-in {
+   0% {
+      opacity: 0;
+      transform: 30px scale(0.9);
+   }
+
+   100% {
+      opacity: 1;
+      transform:(0px) scale(1);
+   }
+}
 
  /* Dark MODE */
  .dark-mode {
@@ -97,10 +111,20 @@
    margin-top: 1rem;
    gap: 1.3rem;
    height: 2rem;
+
 }
 
 .fa-solid, .fa-brands {
    cursor: pointer;
+}
+
+i:hover {
+   transform: scale(1.25);
+   transition: 0.1s ease-in-out;
+}
+
+i:not(:hover){
+   transition: 0.1s ease-in-out;
 }
 
 /* Typewriter Animation */
