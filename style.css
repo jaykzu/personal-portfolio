@@ -42,6 +42,15 @@
    cursor: pointer;
 }
 
+#toggle:hover {
+   transform: scale(1.25);
+   transition: 0.1s ease-in-out;
+}
+
+#toggle:not(:hover) {
+   transition: 0.1s ease-in-out;
+}
+
  /* Section(s) */
 
  #profile, #socials, .second {
