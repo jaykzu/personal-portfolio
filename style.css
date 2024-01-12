@@ -72,7 +72,7 @@
 }
 
 #emoticon {
-   font-size: 4rem;
+   font-size: 3.5rem;
 }
 
 .section-text p {
@@ -80,21 +80,19 @@
    margin-bottom: 1rem;
 }
 
+/* Icons */
+
 #socials-container {
    display: flex;
    justify-content: center;
    margin-top: 1rem;
-   gap: 1rem;
-}
-
-/* Icon */
-
-.icon {
-   cursor: pointer;
+   gap: 1.3rem;
    height: 2rem;
 }
 
-
+.fa-solid, .fa-brands {
+   cursor: pointer;
+}
 
 /* Typewriter Animation */
 
