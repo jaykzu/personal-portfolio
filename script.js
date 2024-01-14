@@ -33,7 +33,7 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const phrases = ['program', 'study', 'sleep', 'work out'];
+const phrases = ['program', 'study', 'code', 'eat', 'sleep', 'work out'];
 const el = document.getElementById('typewriter');
 
 let sleepTime = 100;
