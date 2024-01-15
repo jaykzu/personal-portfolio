@@ -70,7 +70,7 @@
  #profile, #socials, .second {
    padding-top: 4vh;
    height: 96vh;
-   margin: 0 18rem;
+   margin: 0 5%;
    box-sizing: border-box;
    min-height: fit-content;
  }
