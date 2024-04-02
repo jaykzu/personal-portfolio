@@ -8,24 +8,24 @@ function toggleMenu() {
 // Dark Mode
 
 var darkMode = localStorage.getItem('darkMode');
+var toggle = document.getElementById('toggle');
 
 if (darkMode === 'enabled') {
     document.body.classList.add('dark-mode');
+    toggle.src = "modes/lightmode.png"; // Sets light mode if darkmode is enabled
 }
 
-var toggle = document.getElementById('toggle');
 
 toggle.onclick = function(){
     document.body.classList.toggle('dark-mode');
     if (document.body.classList.contains('dark-mode')){
-        toggle.src = "modes/darkmode.png";
+        toggle.src = "modes/lightmode.png";
         localStorage.setItem('darkMode', 'enabled');
     }else{
-        toggle.src = "modes/lightmode.png";
+        toggle.src = "modes/darkmode.png";
         localStorage.setItem('darkMode', 'disabled');
     }
 }
-
 
 // Typewriting 
 
@@ -33,7 +33,7 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const phrases = ['program', 'study', 'code', 'eat', 'sleep', 'work out'];
+const phrases = ['program', 'hug my dog', 'study', 'code', 'eat', 'sleep', 'work out'];
 const el = document.getElementById('typewriter');
 
 let sleepTime = 100;
