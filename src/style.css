@@ -1,9 +1,8 @@
 /* general */
  
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 * {
     margin: 0;
@@ -12,10 +11,12 @@
 
 
  body {
-   font-family: 'Inter', sans-serif;
+   font-family: 'fira code', monospace;
    background-color: #020617;
    color: white;
    transition: background-color 1s;
+   margin: 0;
+   padding: 0;
  }
 
  html {
@@ -23,7 +24,8 @@
  }
 
  p {
-   font-family: 'Inconsolata', monospace;
+   font-family: 'fira code', monospace;
+   font-weight: 400;
 
  }
 
@@ -69,39 +71,71 @@
  /* Section(s) */
 
  #profile, #socials, .second {
-   padding-top: 4vh;
-   height: 100vh;
-   margin: 0 5%;
+   padding: 4vh 5%;
+   min-height: 100vh;
    box-sizing: border-box;
-   min-height: fit-content;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
  }
  
-/* Profile */
+/* Profile */ 
 
 #profile {
    display: flex;
-   justify-content: center;
-   gap: 5rem;
-   height: 80vh;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 2rem;
+   height: 100vh;
+   padding-top: 17vh;
 }
 
 .section-text {
-   align-self: center;
-   text-align: center;
+   position: relative;
+   margin-top: 0;
+   text-align: left;
+   max-width: 600px;
+   width: 100%;
 }
 
-.title  {
-   font-size: 2.5rem;
-   text-align: center;
-}
-
-#emoticon {
-   font-size: 2.5rem;
+.title {
+   font-size: 2rem;
+   text-align: left;
+   font-weight: 450;
 }
 
 .section-text p {
-   font-size: 1.5rem;
    margin-bottom: 1rem;
+}
+
+#inquiry {
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+.tpw-text {
+   font-size: 0.9rem;
+}
+
+.personal-info p {
+   font-size: 0.9rem;
+}
+
+#softwaredev {
+   color: #f7768e;
+}
+
+#locationicon, #jobicon {
+   font-size: 1.5rem;
+   margin-right: 0.5rem;
+}
+
+
+.sub {
+   font-size: 0.8rem;
+   margin-top: 2rem;
+   width: 100%;
 }
 
 /* Icons */
@@ -109,12 +143,8 @@
 #socials-container {
    display: flex;
    justify-content: center;
-   margin-top: 1rem;
+   margin-top: 15vh;
    gap: 1.3rem;
-   height: 2rem;
-   position: absolute;
-   bottom: 5.5rem;
-   
 }
 
 .fa-solid, .fa-brands {
@@ -134,13 +164,13 @@ i:not(:hover){
 
 #typewriter {
    color:#9ece6a;
-   font-weight: bold;
+   font-weight: 650;
 }
 
 #cursor {
    color: #9ece6a;
    animation: blink 0.5s linear infinite;
-   font-weight: bold;
+   font-weight: 650;
 }
 
 @keyframes blink {
@@ -157,7 +187,7 @@ i:not(:hover){
 .about-me p {
    padding-top: 40vh;
    text-align: center;
-   font-weight: bold;
+   font-weight: 100;
    font-size: 25px;
 }
 
@@ -174,3 +204,27 @@ i:not(:hover){
    transform: translateX(0);
 }
 
+/* Media Queries */
+@media screen and (max-width: 768px) {
+   .title {
+      font-size: 1.5rem;
+   }
+
+   .sub {
+      font-size: 0.7rem;
+   }
+
+   #socials-container {
+      flex-wrap: wrap;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .title {
+      font-size: 1.2rem;
+   }
+
+   .sub {
+      font-size: 0.6rem;
+   }
+}
