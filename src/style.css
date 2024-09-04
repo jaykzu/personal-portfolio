@@ -185,7 +185,6 @@ i:not(:hover){
 /* Second page */
 
 .about-me p {
-   padding-top: 40vh;
    text-align: center;
    font-weight: 100;
    font-size: 25px;
