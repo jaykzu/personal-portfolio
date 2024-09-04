@@ -217,6 +217,13 @@ i:not(:hover){
    #socials-container {
       flex-wrap: wrap;
    }
+
+   #toggle {
+      width: 30px;
+      height: 30px;
+      padding: 10px;
+      margin: 5px;
+   }
 }
 
 @media screen and (max-width: 480px) {
@@ -226,5 +233,11 @@ i:not(:hover){
 
    .sub {
       font-size: 0.6rem;
+   }
+   #toggle {
+      width: 25px;
+      height: 25px;
+      padding: 8px;
+      margin: 3px;
    }
 }  
