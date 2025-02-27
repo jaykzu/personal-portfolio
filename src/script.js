@@ -11,7 +11,7 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const phrases = ['study', 'hug my dog', 'program', 'eat', 'sleep', 'work out', 'code', 'practice MMA', 'listen to tunes', 'play sports', 'learn new things', 'play chess'];
+const phrases = ['hug my dog', 'program', 'eat', 'sleep', 'work out', 'code', 'practice MMA', 'listen to tunes', 'play sports', 'learn new things', 'play chess', 'study'];
 const el = document.getElementById('typewriter');
 
 let sleepTime = 100;
