@@ -1,5 +1,3 @@
-// Enhanced search.js with suggestions functionality and scroll into view fix
-
 document.addEventListener('DOMContentLoaded', function() {
     const searchButton = document.getElementById('search-button');
     const searchModal = document.getElementById('search-modal');
