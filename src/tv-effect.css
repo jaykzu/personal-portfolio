@@ -1,0 +1,183 @@
+:root {
+    /* Pale Night Color Palette */
+    --palenight-bg: #292D3E;  /* Deep purple-blue background */
+    --palenight-darker: #1E2132; /* Darker background for contrast */
+    --palenight-lighter: #3A3F58; /* Lighter background for hover states */
+    --palenight-highlighted-line: #34324a; /* Background for highlighted line */
+    --palenight-foreground: #A6ACCD; /* Main text color - light lavender */
+    --palenight-white: #FFFFFF;  /* Pure white */
+    --palenight-cyan: #80CBC4;  /* Teal/Cyan - for highlights */
+    --palenight-blue: #82AAFF;  /* Bright blue - for functions/methods */
+    --palenight-purple: #C792EA; /* Purple - for keywords */
+    --palenight-pink: #F07178;  /* Pink/red - for variables */
+    --palenight-red: #FF5370;  /* Brighter red - for JSX tags */
+    --palenight-yellow: #FFCB6B; /* Yellow - for classes/constants */
+    --palenight-orange: #F78C6C; /* Orange - for numbers */
+    --palenight-green: #C3E88D; /* Green - for strings */
+    --palenight-gray: #8C92B4; /* Brighter gray - was #676E95 */
+    --palenight-comment: #676E95; /* Original gray for actual comments */
+    --palenight-error: #FF5370; /* Red - for errors */
+    --palenight-line-number: #4E5579; /* Color for line numbers in editor */
+    --palenight-operator: #89DDFF; /* Light blue for operators/punctuation */
+  }
+  
+  /* Apply TV container to the entire body */
+  body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10000;
+      pointer-events: none;
+      
+      /* strong scan lines effect */
+      background: repeating-linear-gradient(
+          0deg,
+          rgba(30, 33, 50, 0.55), 
+          rgba(30, 33, 50, 0.55) 1px,
+          rgba(166, 172, 205, 0.03) 1px,
+          rgba(166, 172, 205, 0.03) 2px
+      );
+  }
+  
+  /* static noise overlay */
+  body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10001;
+      pointer-events: none;
+      background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.5 0"/></filter><rect width="100%" height="100%" filter="url(%23noise)"/></svg>');
+      opacity: 0.035; /* Slightly more visible noise */
+      animation: staticNoise 0.5s infinite;
+  }
+  
+  /* screen flicker */
+  .screen-flicker {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(166, 172, 205, 0.02);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 10003;
+      animation: flicker 8s infinite;
+  }
+  
+  /* TV effect Controls with styling */
+  .tv-controls {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 10010;
+      background: rgba(30, 33, 50, 0.6); /* Darker background with opacity */
+      padding: 10px;
+      border-radius: 10px;
+      transition: opacity 0.3s;
+      border: 1px solid var(--palenight-operator);
+  }
+  
+  .tv-controls:hover {
+      opacity: 1;
+  }
+  
+  .control-btn {
+      padding: 8px 12px;
+      background-color: var(--palenight-darker);
+      color: var(--palenight-operator);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'fira code', monospace;
+      font-size: 0.8rem;
+      transition: background-color 0.3s;
+  }
+  
+  .control-btn:hover {
+      background-color: var(--palenight-highlighted-line);
+      color: var(--palenight-yellow);
+  }
+  
+  /* Animations */
+  @keyframes staticNoise {
+      0% { opacity: 0.035; }
+      50% { opacity: 0.045; }
+      100% { opacity: 0.035; }
+  }
+  
+  @keyframes flicker {
+      0% { opacity: 0; }
+      5% { opacity: 0.025; }
+      6% { opacity: 0; }
+      90% { opacity: 0; }
+      95% { opacity: 0.03; }
+      96% { opacity: 0; }
+      100% { opacity: 0; }
+  }
+  
+  /* Occasional color flare effects */
+  .crt-flare {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, 
+          rgba(137, 221, 255, 0) 0%,
+          rgba(137, 221, 255, 0.03) 50%, 
+          rgba(199, 146, 234, 0) 100%);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 10004;
+      animation: flare 15s infinite;
+  }
+  
+  @keyframes flare {
+      0% { opacity: 0; }
+      5% { opacity: 0.35; }
+      10% { opacity: 0; }
+      100% { opacity: 0; }
+  }
+  
+  /* States for toggle buttons */
+  .scanlines-off::before {
+      opacity: 0 !important;
+  }
+  
+  .noise-off::after {
+      opacity: 0 !important;
+  }
+  
+  .glitch-off h1, 
+  .glitch-off .title {
+      text-shadow: none !important;
+      animation: none !important;
+  }
+  
+  /* Hide controls when not hovered */
+  .tv-controls {
+      opacity: 0.2;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+      .tv-controls {
+          flex-direction: column;
+          bottom: 10px;
+          right: 10px;
+      }
+      
+      .control-btn {
+          padding: 6px 10px;
+          font-size: 0.7rem;
+      }
+  }
