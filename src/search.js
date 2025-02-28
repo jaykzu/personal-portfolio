@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let searchOpen = false;
     let selectedSuggestionIndex = -1;
     const suggestions = [
-        { icon: 'fa-home', text: 'home', url: 'index.html' },
-        { icon: 'fa-code', text: 'projects', url: 'projects.html' },
-        { icon: 'fa-pen-to-square', text: 'blog', url: 'blog.html' },
-        { icon: 'fa-rss', text: 'rss', url: 'resources.html' },
-        { icon: 'fa-film', text: 'kino', url: 'kino.html' },
-        { icon: 'fa-newspaper', text: 'log', url: 'log.html' },
+        { icon: 'fa-home', text: 'home', url: '/' },
+        { icon: 'fa-code', text: 'projects', url: '/projects' },
+        { icon: 'fa-pen-to-square', text: 'blog', url: '/blog' },
+        { icon: 'fa-rss', text: 'rss', url: '/resources' },
+        { icon: 'fa-film', text: 'kino', url: '/kino' },
+        { icon: 'fa-newspaper', text: 'log', url: '/log' },
         { icon: 'fa-brands fa-github', text: 'github', url: 'https://github.com/jaykzu' },
         { icon: 'fa-brands fa-twitter', text: 'x/twtr', url: 'https://twitter.com/jaykzu' },
-        { icon: 'fa-gear', text: 'settings', url: 'settings.html' }
+        { icon: 'fa-gear', text: 'settings', url: '/settings' }
     ];
     
     // Toggle search function
