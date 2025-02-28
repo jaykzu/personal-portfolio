@@ -1,0 +1,11 @@
+{
+    "rewrites": [
+      { "source": "/projects", "destination": "/projects.html" },
+      { "source": "/blog", "destination": "/blog.html" },
+      { "source": "/resources", "destination": "/resources.html" },
+      { "source": "/kino", "destination": "/kino.html" },
+      { "source": "/log", "destination": "/log.html" },
+      { "source": "/settings", "destination": "/settings.html" }
+    ]
+  }
+  
