@@ -413,6 +413,8 @@ i:not(:hover){
 h1, .title {
    position: relative;
    animation: code-glitch 4s infinite;
+   font-style: italic;
+   padding-bottom: 1vh;
 }
 
 @keyframes code-glitch {
